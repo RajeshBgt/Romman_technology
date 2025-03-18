@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zookeeper Form</title>
+<style>
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.form-container {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.animal-list {
+    margin-bottom: 20px;
+}
+
+.animal-list label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.required::after {
+    content: "*";
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Zoo Keeper Application Form</h1>
+    <p>Please complete the form. Mandatory fields are marked with a <span class="required"></span></p>
+
+    <fieldset>
+        <legend>CONTACT DETAILS</legend>
+        <label for="name" class="required">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="telephone">Telephone</label>
+        <input type="text" id="telephone" name="telephone">
+
+        <label for="email" class="required">Email</label>
+        <input type="email" id="email" name="email">
+    </fieldset>
+
+    <fieldset>
+        <legend>PERSONAL INFORMATION</legend>
+        <label for="age" class="required">Age</label>
+        <input type="text" id="age" name="age">
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="why">When did you first know you wanted to be a zoo-keeper?</label>
+        <textarea id="why" name="why"></textarea>
+    </fieldset>
+
+    <fieldset class="animal-list">
+        <legend>PICK YOUR FAVORITE ANIMALS</legend>
+        <label><input type="checkbox" name="animal" value="zebra">Zebra</label>
+        <label><input type="checkbox" name="animal" value="cat">Cat</label>
+        <label><input type="checkbox" name="animal" value="anaconda">Anaconda</label>
+        <label><input type="checkbox" name="animal" value="human">Human</label>
+        <br>
+        <label><input type="checkbox" name="animal" value="elephant">Elephant</label>
+        <label><input type="checkbox" name="animal" value="wildebeest">Wildebeest</label>
+        <label><input type="checkbox" name="animal" value="pigeon">Pigeon</label>
+        <label><input type="checkbox" name="animal" value="crab">Crab</label>
+    </fieldset>
+
+    <div class="submit-button">
+        <button type="submit">Submit Application</button>
+    </div>
+</div>
+
+</body>
+</html>
